@@ -5,12 +5,55 @@
 <meta name="theme-color" content="#ffffff"><title>Boulder Culture</title>
 <style>
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#111;font-family:Arial,Helvetica,sans-serif}a{color:inherit}section{padding:clamp(22px,4vw,72px)}.eyebrow{font-size:clamp(14px,1.15vw,19px);font-weight:800}.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;gap:50px}.hero h1{font-size:clamp(70px,12.3vw,220px);line-height:.87;letter-spacing:-.085em;font-weight:900;margin:0}.hero-bottom{display:flex;flex-direction:column;align-items:start;gap:26px}.hero-bottom p{max-width:840px;font-size:clamp(21px,2.3vw,36px);line-height:1.16;letter-spacing:-.04em;margin:0}.email{font-size:clamp(19px,2.1vw,34px);font-weight:800;overflow-wrap:anywhere;text-underline-offset:5px}.next{min-height:85svh;display:flex;flex-direction:column;justify-content:space-between;gap:65px;border-top:2px solid #111}.next h2{font-size:clamp(70px,11vw,185px);line-height:.9;letter-spacing:-.08em;margin:0}.next p{font-size:clamp(22px,2.5vw,40px);margin:0}.how,.nights,.close{border-top:2px solid #111}.how{padding-bottom:clamp(80px,10vw,160px)}.how-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:clamp(60px,8vw,130px)}.how-grid p{font-size:clamp(32px,3.9vw,65px);font-weight:800;line-height:1.05;letter-spacing:-.06em;margin:0}.how-grid strong{display:block}.nights .list{margin-top:60px}.nights .list div{border-top:1px solid #111;font-size:clamp(50px,8.2vw,140px);font-weight:850;line-height:1.04;letter-spacing:-.075em;padding:15px 0 20px}.nights .list div:last-child{border-bottom:1px solid #111}.photo-placeholder{height:clamp(220px,45vw,640px);border:1px solid #111;margin-top:clamp(70px,10vw,150px)}.close{min-height:65svh;display:flex;flex-direction:column;justify-content:center}.close h2{font-size:clamp(57px,9vw,150px);line-height:.94;letter-spacing:-.08em;margin:0}.logo-section{background:#101010;padding:clamp(40px,7vw,110px) clamp(22px,6vw,100px);text-align:center}.logo-section img{display:block;width:min(100%,1050px);height:auto;margin:auto}.foundation{color:white;font-size:clamp(18px,2.8vw,40px);font-weight:800;letter-spacing:.35em;padding-left:.35em;margin:20px 0 0}.footer{padding:25px clamp(22px,4vw,72px);font-size:clamp(13px,1.1vw,18px);font-weight:700}@media(max-width:700px){.hero h1{font-size:clamp(65px,15.4vw,110px)}.next h2{font-size:clamp(60px,14vw,100px)}.how-grid{grid-template-columns:1fr;gap:44px}.how-grid p{font-size:clamp(38px,9vw,65px)}.nights .list div{font-size:clamp(47px,10.7vw,88px)}.close h2{font-size:clamp(55px,11vw,100px)}.foundation{letter-spacing:.2em;padding-left:.2em}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Civic information: compact, practical, and distinct from event programming */
+.vote{border-top:2px solid #111;background:#f2f0e9;padding-top:clamp(35px,5vw,85px);padding-bottom:clamp(45px,7vw,110px)}
+.vote-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.vote-kicker{font-size:clamp(14px,1.2vw,19px);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.vote-number{font-size:14px;font-weight:700}
+.vote-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(35px,6vw,110px);margin-top:clamp(42px,6vw,95px);align-items:start}
+.vote h2{font-size:clamp(54px,8vw,130px);line-height:.91;letter-spacing:-.075em;margin:0 0 32px}
+.vote-intro{font-size:clamp(21px,2.25vw,34px);line-height:1.19;letter-spacing:-.035em;max-width:650px;margin:0}
+.vote-info{border-top:2px solid #111}
+.vote-item{padding:21px 0;border-bottom:1px solid #777}
+.vote-item h3{font-size:clamp(20px,2vw,29px);margin:0 0 8px;letter-spacing:-.04em}
+.vote-item p{font-size:clamp(16px,1.25vw,19px);line-height:1.45;margin:0;color:#333}
+.vote-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.vote-button{display:inline-flex;align-items:center;justify-content:center;padding:16px 22px;background:#111;color:white;font-size:16px;font-weight:800;text-decoration:none;min-height:54px}
+.vote-button.secondary{background:transparent;color:#111;border:2px solid #111}
+.vote-button:hover,.vote-button:focus-visible{background:#d8ef6c;color:#111;outline:2px solid #111;outline-offset:2px}
+.vote-source{font-size:13px;line-height:1.5;margin:24px 0 0;color:#444}
+.vote-source a{text-underline-offset:3px}
+@media(max-width:800px){.vote-layout{grid-template-columns:1fr}.vote h2{font-size:clamp(57px,13vw,100px)}}
+
 </style></head>
 <body><main>
 <section class="hero" aria-labelledby="hero-title"><h1 id="hero-title">Come alone.<br>Leave with people.</h1><div class="hero-bottom"><p>Boulder Culture gets people in the same place, in person and for free, so strangers meet, come back, and the culture gets stronger.</p><a class="email" href="mailto:leo@boulderculture.org">leo@boulderculture.org</a></div></section>
 <section class="next" id="next" aria-labelledby="next-title"><div class="eyebrow">Next up</div><h2 id="next-title">First gathering,<br>coming soon.</h2><p>Time and place go here. Come alone.</p></section>
 <section class="how" aria-label="How it works"><div class="eyebrow">How it works</div><div class="how-grid"><p><strong>Free.</strong>No ticket, no dues.</p><p><strong>No list.</strong>If you are there, you are in it.</p><p>A different reason each time.</p></div></section>
 <section class="nights" aria-label="The nights"><div class="eyebrow">The nights</div><div class="list"><div>A hike.</div><div>A car meet.</div><div>Yoga on the grass.</div><div>A run.</div><div>Music.</div><div>A table.</div><div>A singles walk.</div></div><div class="photo-placeholder" aria-label="Space reserved for a future real photograph"></div></section>
+
+<section class="vote" id="vote" aria-labelledby="vote-title">
+  <div class="vote-top"><span class="vote-kicker">Civic life / Voter registration</span><span class="vote-number">Boulder, Colorado</span></div>
+  <div class="vote-layout">
+    <div>
+      <h2 id="vote-title">Your city.<br>Your vote.</h2>
+      <p class="vote-intro">Boulder is shaped by the people who live, study, work, and spend time here. Local decisions affect housing, public space, safety, and the places where we gather. Here's how to check your registration and find where to vote.</p>
+      <div class="vote-links">
+        <a class="vote-button" href="https://www.coloradosos.gov/voter/pages/pub/olvr/verifyNewVoter.xhtml" target="_blank" rel="noopener noreferrer">Register or check status ↗</a>
+        <a class="vote-button secondary" href="https://bouldercounty.gov/elections/information/vote-centers/" target="_blank" rel="noopener noreferrer">Find a vote center ↗</a>
+      </div>
+      <p class="vote-source">Election information from <a href="https://bouldercounty.gov/elections/register/" target="_blank" rel="noopener noreferrer">Boulder County Elections</a>. This section is nonpartisan and does not endorse candidates or parties.</p>
+    </div>
+    <div class="vote-info">
+      <div class="vote-item"><h3>01 / Check your registration</h3><p>Confirm your current address and registration details through Colorado's official voter portal.</p></div>
+      <div class="vote-item"><h3>02 / Register in person</h3><p>Eligible Colorado residents can register and vote at a Vote Center through Election Day. Bring an accepted form of identification.</p></div>
+      <div class="vote-item"><h3>03 / Voting on campus</h3><p>For the November 2026 election, CU Boulder's University Memorial Center (UMC) is a Vote Center. Check official hours and locations before visiting.</p></div>
+      <div class="vote-item"><h3>04 / Living in a dorm?</h3><p>Follow Boulder County's <a href="https://bouldercounty.gov/elections/register/" target="_blank" rel="noopener noreferrer">student registration guidance</a> so your ballot reaches the correct mailing address.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="close"><h2>Strangers meet. They come back. The culture gets stronger.</h2></section>
 <div class="logo-section"><div class="foundation">BOULDER CULTURE FOUNDATION</div></div></main><footer class="footer">Boulder Culture Foundation. Forming in Colorado.</footer>
 </body></html>
