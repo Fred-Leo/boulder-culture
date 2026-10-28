@@ -1,0 +1,30 @@
+/* Civic information: compact, practical, and distinct from event programming */
+.vote{border-top:2px solid #111;background:#f2f0e9;padding-top:clamp(35px,5vw,85px);padding-bottom:clamp(45px,7vw,110px)}
+.vote-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.vote-kicker{font-size:clamp(14px,1.2vw,19px);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.vote-number{font-size:14px;font-weight:700}
+.vote-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:clamp(35px,6vw,110px);margin-top:clamp(42px,6vw,95px);align-items:start}
+.vote h2{font-size:clamp(54px,8vw,130px);line-height:.91;letter-spacing:-.075em;margin:0 0 32px}
+.vote-intro{font-size:clamp(21px,2.25vw,34px);line-height:1.19;letter-spacing:-.035em;max-width:650px;margin:0}
+.vote-info{border-top:2px solid #111}
+.vote-item{padding:21px 0;border-bottom:1px solid #777}
+.vote-item h3{font-size:clamp(20px,2vw,29px);margin:0 0 8px;letter-spacing:-.04em}
+.vote-item p{font-size:clamp(16px,1.25vw,19px);line-height:1.45;margin:0;color:#333}
+.vote-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.vote-button{display:inline-flex;align-items:center;justify-content:center;padding:16px 22px;background:#111;color:white;font-size:16px;font-weight:800;text-decoration:none;min-height:54px}
+.vote-button.secondary{background:transparent;color:#111;border:2px solid #111}
+.vote-button:hover,.vote-button:focus-visible{background:#d8ef6c;color:#111;outline:2px solid #111;outline-offset:2px}
+.vote-source{font-size:13px;line-height:1.5;margin:24px 0 0;color:#444}
+.vote-source a{text-underline-offset:3px}
+@media(max-width:800px){.vote-layout{grid-template-columns:1fr}.vote h2{font-size:clamp(57px,13vw,100px)}}
+
+
+/* Temporary election notice: visible through November 3, 2026. */
+.election-banner{background:#e4ff75;color:#111;border-bottom:2px solid #111;padding:14px clamp(22px,4vw,72px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif}
+.election-banner[hidden]{display:none}.election-banner strong{font-size:clamp(16px,1.6vw,22px);letter-spacing:-.025em}
+.election-banner p{margin:4px 0 0;font-size:clamp(13px,1vw,16px);line-height:1.4}
+.election-banner a{background:#111;color:#fff;padding:11px 16px;font-weight:800;text-decoration:none;white-space:nowrap;font-size:15px}
+.election-banner a:focus-visible{outline:3px solid #111;outline-offset:3px}
+@media(max-width:650px){.election-banner a{width:100%;text-align:center}}
+
+.vote{margin-block:55px;border-radius:7px;background:#eeecf9;color:#24256e;padding:clamp(25px,5vw,60px);border-top:0}.vote h2{font-size:clamp(42px,5vw,72px);letter-spacing:-.045em;line-height:1.07}.vote-intro{font-size:21px;line-height:1.45;letter-spacing:normal}.vote-button,.election-banner a{background:#282783}.vote-button.secondary{color:#24256e;border-color:#282783}.election-banner{background:#f7e8ac;color:#24256e;border-bottom:1px solid #d9d7e8}.vote-info{border-color:#282783}.vote-item{border-color:#d9d7e8}.election-banner p{max-width:850px}

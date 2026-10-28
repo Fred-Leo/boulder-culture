@@ -1,26 +1,25 @@
 # Boulder Culture
 
-**Come alone. Leave with people.**
+The complete original multipage website for https://boulderculture.org, preserved from its ChatGPT Sites deployment.
 
-Boulder Culture is an independent community initiative forming in Colorado. It brings people together through free, in-person gatherings in Boulder: hikes, car meets, yoga, runs, music, tables, and singles walks.
+## Source
 
-## Website
+- `dist/`: all 23 original HTML pages, photos, styles, gallery and contact-form scripts; includes the nonpartisan student voting banner and homepage section.
+- `.openai/hosting.json`: existing ChatGPT Site identity and static publishing directory. Keep this project ID unchanged.
+- `index.html`: convenience redirect for repository-root previews.
 
-- Domain: https://boulderculture.org
-- Contact: leo@boulderculture.org
-- Entry point: `index.html`
-- Stack: semantic HTML and responsive CSS; no framework or build step required.
+No dependencies or build step. Serve `dist/` with any static server, for example `python -m http.server 8000 --directory dist`.
 
-## Run locally
+## Publishing
 
-Open `index.html` in your browser or run `python -m http.server 8000` from this directory and visit `http://localhost:8000`.
+Production remains on the original ChatGPT Sites project, with the existing boulderculture.org domain and public audience. GitHub is the complete editable source. A ChatGPT automation publishes merged pull requests to the default branch through the original Site. Direct pushes do not trigger that automation; use a pull request for automatic publication.
 
-## Status
+The publishing automation validates the Site manifest, copies the source to the original Site repository, packages `dist/`, saves and deploys the exact commit, and checks the live domain. It must retain every existing page and never substitute the earlier single-page draft.
 
-The initial landing page is committed. The first gathering's date and location have not been announced. Hosting, domain configuration, and the original mountain logo still need to be finalized. The repository alone does not mean the website is deployed.
+## Voting information
 
-## Principles
+Official Colorado and Boulder County links; no candidate or party endorsements. The election banner expires automatically after November 3, 2026 in America/Denver. Review election-specific section copy before reuse for later elections.
 
-Free to attend. No dues or invitation list. Boulder Culture is independent of CU Boulder and political campaigns.
+## Contact
 
-Boulder Culture Foundation. Forming in Colorado.
+leo@boulderculture.org. Boulder Culture Foundation is forming in Colorado, independent of CU Boulder and political campaigns.
