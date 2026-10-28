@@ -13,3 +13,6 @@
 
 /* Quieter cards and captions let the photos and headings lead. */
 .activity{min-height:155px;padding:25px}.activity-num{margin-bottom:16px}.activity h3{margin-bottom:0}.activity .explore{padding-top:20px}.hero .gallery-heading{justify-content:flex-end}.gallery-group figcaption{font-size:13px}.gallery-group img[src*="cycling-photo"]{object-position:37% center}.gallery-group img[src*="cars-photo"]{object-position:center 80%}.detail-photo img[src*="cars-photo"]{object-position:center 80%}.intro-band{padding-block:40px}.listing-note{font-size:12px;margin-top:18px}.footer-nav{flex-wrap:wrap}@media(max-width:650px){.activity{min-height:135px}.intro-band{padding-block:30px}}
+
+/* Navigation and editorial updates. */
+.main-nav{gap:20px}.hero h1{font-size:clamp(48px,5.4vw,82px)}.local-events:first-of-type{padding-top:10px}.gatherings-section .section-heading p{margin-top:14px}.main-nav a{white-space:nowrap}@media(max-width:650px){.main-nav{gap:15px}.hero h1{font-size:clamp(46px,11.5vw,70px)}}
