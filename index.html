@@ -26,8 +26,31 @@
 .vote-source a{text-underline-offset:3px}
 @media(max-width:800px){.vote-layout{grid-template-columns:1fr}.vote h2{font-size:clamp(57px,13vw,100px)}}
 
+
+/* Temporary election notice: visible through November 3, 2026. */
+.election-banner{background:#e4ff75;color:#111;border-bottom:2px solid #111;padding:14px clamp(22px,4vw,72px);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif}
+.election-banner[hidden]{display:none}.election-banner strong{font-size:clamp(16px,1.6vw,22px);letter-spacing:-.025em}
+.election-banner p{margin:4px 0 0;font-size:clamp(13px,1vw,16px);line-height:1.4}
+.election-banner a{background:#111;color:#fff;padding:11px 16px;font-weight:800;text-decoration:none;white-space:nowrap;font-size:15px}
+.election-banner a:focus-visible{outline:3px solid #111;outline-offset:3px}
+@media(max-width:650px){.election-banner a{width:100%;text-align:center}}
 </style></head>
-<body><main>
+<body>
+<div class="election-banner" id="election-banner" role="region" aria-label="November 2026 voting information">
+ <div><strong>Election Day is Tuesday, November 3.</strong><p>Check your registration or register and vote at a Boulder County Vote Center. CU's UMC is open for in-person voting.</p></div>
+ <a href="https://bouldercounty.gov/elections/information/vote-centers/" target="_blank" rel="noopener noreferrer">Voting locations &amp; hours ↗</a>
+</div>
+<script>
+(function(){
+  // Hide after Election Day using Colorado local time, regardless of visitor location.
+  var coloradoDate = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Denver',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  var parts = coloradoDate.match(/\d+/g);
+  if(parts && Number(parts[0])*10000 + Number(parts[1])*100 + Number(parts[2]) > 20261103){
+    var notice=document.getElementById('election-banner'); if(notice) notice.hidden=true;
+  }
+})();
+</script>
+<main>
 <section class="hero" aria-labelledby="hero-title"><h1 id="hero-title">Come alone.<br>Leave with people.</h1><div class="hero-bottom"><p>Boulder Culture gets people in the same place, in person and for free, so strangers meet, come back, and the culture gets stronger.</p><a class="email" href="mailto:leo@boulderculture.org">leo@boulderculture.org</a></div></section>
 <section class="next" id="next" aria-labelledby="next-title"><div class="eyebrow">Next up</div><h2 id="next-title">First gathering,<br>coming soon.</h2><p>Time and place go here. Come alone.</p></section>
 <section class="how" aria-label="How it works"><div class="eyebrow">How it works</div><div class="how-grid"><p><strong>Free.</strong>No ticket, no dues.</p><p><strong>No list.</strong>If you are there, you are in it.</p><p>A different reason each time.</p></div></section>
