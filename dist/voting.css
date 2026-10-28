@@ -28,3 +28,6 @@
 @media(max-width:650px){.election-banner a{width:100%;text-align:center}}
 
 .vote{margin-block:55px;border-radius:7px;background:#eeecf9;color:#24256e;padding:clamp(25px,5vw,60px);border-top:0}.vote h2{font-size:clamp(42px,5vw,72px);letter-spacing:-.045em;line-height:1.07}.vote-intro{font-size:21px;line-height:1.45;letter-spacing:normal}.vote-button,.election-banner a{background:#282783}.vote-button.secondary{color:#24256e;border-color:#282783}.election-banner{background:#f7e8ac;color:#24256e;border-bottom:1px solid #d9d7e8}.vote-info{border-color:#282783}.vote-item{border-color:#d9d7e8}.election-banner p{max-width:850px}
+
+/* Original Boulder Culture logo with Foundation below. */
+.site-header>.brand-logo{display:flex;flex-direction:column;align-items:center;width:190px;max-width:100%;flex-shrink:0;text-decoration:none;gap:5px;line-height:1}.brand-logo img{display:block;width:100%;height:auto}.site-header>.brand-logo span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.24em;padding-left:.24em}@media(max-width:650px){.site-header>.brand-logo{width:170px}}
