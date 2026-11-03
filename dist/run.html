@@ -2,14 +2,5 @@
  <div><strong>CU Boulder students: vote at the UMC.</strong><p>Bring your Buff OneCard. Open now through Election Day.</p></div>
  <a href="student-voting.html">Vote at the UMC →</a>
 </div>
-<script>
-(function(){
-  // Hide after Election Day using Colorado local time, regardless of visitor location.
-  var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Denver',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
-  var dateParts = Object.fromEntries(parts.map(function(p){return [p.type,p.value]}));
-  if(Number(dateParts.year+dateParts.month+dateParts.day) > 20261103){
-    var notice=document.getElementById('election-banner'); if(notice) notice.hidden=true;
-  }
-})();
-</script>
+<script src="election.js" defer></script>
 <a href="bike-ride.html">Continue to Boulder Culture</a></body></html>

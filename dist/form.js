@@ -4,6 +4,8 @@ document.querySelectorAll('.involvement-form').forEach(form => {
     if (!form.reportValidity() || form.dataset.sending === 'true') return;
     const status = form.querySelector('.form-status');
     const button = form.querySelector('button[type="submit"]');
+    if (!status || !button) return;
+    const originalLabel = button.textContent;
     const data = Object.fromEntries(new FormData(form));
     if (data._honey) return;
     form.dataset.sending = 'true';
@@ -14,7 +16,7 @@ document.querySelectorAll('.involvement-form').forEach(form => {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
     try {
-      const response = await fetch('https://formsubmit.co/ajax/leo@boulderculture.org', {
+      const response = await fetch(form.action.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/'), {
         method: 'POST', headers: {'Content-Type':'application/json','Accept':'application/json'},
         body: JSON.stringify(data), signal: controller.signal
       });
@@ -38,7 +40,7 @@ document.querySelectorAll('.involvement-form').forEach(form => {
       clearTimeout(timeout);
       form.dataset.sending = 'false';
       button.disabled = false;
-      button.textContent = 'Send message';
+      button.textContent = originalLabel;
     }
   });
 });
